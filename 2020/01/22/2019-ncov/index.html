@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="基于分子进化方法探究冠状病毒的进化"><meta name="keywords" content="生物信息,分子进化,冠状病毒"><meta name="author" content="双语之城"><meta name="copyright" content="双语之城"><title>基于分子进化方法探究冠状病毒的进化 | 双语之城的博客</title><link rel="shortcut icon" href="/logo.png"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 5.4.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%86%E5%AD%90%E8%BF%9B%E5%8C%96%E7%9A%84%E7%94%9F%E7%89%A9%E5%AD%A6%E6%84%8F%E4%B9%89"><span class="toc-number">2.</span> <span class="toc-text">1. 分子进化的生物学意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%86%E5%AD%90%E8%BF%9B%E5%8C%96%E7%9A%84%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">2. 分子进化的相关工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E5%9F%BA%E4%BA%8E%E7%A0%94%E7%A9%B6%E6%B0%B4%E5%B9%B3%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.1.</span> <span class="toc-text">2.1基于研究水平的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E5%9F%BA%E4%BA%8E%E6%89%80%E7%94%A8%E7%AE%97%E6%B3%95%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">2.2基于所用算法的分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%9B%E5%8C%96%E9%80%89%E6%8B%A9%E5%8E%8B%E5%8A%9B"><span class="toc-number">4.</span> <span class="toc-text">3. 进化选择压力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%B3%E4%BA%8E%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92-Hcov-%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.</span> <span class="toc-text">4. 关于冠状病毒(Hcov)的介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%9F%BA%E4%BA%8E%E5%88%86%E5%AD%90%E9%92%9F%E5%88%86%E6%9E%90%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E8%BF%9B%E5%8C%96%E6%A0%91"><span class="toc-number">6.</span> <span class="toc-text">5. 基于分子钟分析冠状病毒进化树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%97%85%E6%AF%92%E7%AA%81%E5%8F%98%E6%83%85%E5%86%B5%E5%88%86%E6%9E%90"><span class="toc-number">7.</span> <span class="toc-text">6. 病毒突变情况分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-ORF%E7%BB%93%E6%9E%84%E8%9B%8B%E7%99%BD%E7%AA%81%E5%8F%98"><span class="toc-number">7.1.</span> <span class="toc-text">6.1 ORF结构蛋白突变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-MERS%E7%97%85%E6%AF%92S%E8%9B%8B%E7%99%BDRBD%E5%BA%8F%E5%88%97%E7%AA%81%E5%8F%98"><span class="toc-number">7.2.</span> <span class="toc-text">6.2 MERS病毒S蛋白RBD序列突变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-229E%E7%97%85%E6%AF%92S%E5%9F%BA%E5%9B%A0%E7%BC%BA%E5%A4%B1"><span class="toc-number">7.3.</span> <span class="toc-text">6.3 229E病毒S基因缺失</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">7. 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">9.</span> <span class="toc-text">参考文献</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">双语之城</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">26</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">19</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/sabar.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">双语之城的博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span></div><div id="post-info"><div id="post-title">基于分子进化方法探究冠状病毒的进化</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-01-22</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>突然想起来之前做过冠状病毒的综述，找出来对比一下新型<em>2019-nCov</em>，相信有了之前的经验，新型病毒的研究能早有突破。</p>
+<span id="more"></span>
+
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>人冠状病毒（HCoV），包括SARS-CoV和MERS-CoV，是源自野生动物的人畜共患病原体。相对于其他病毒，HCoV具有更大的基因组，可编码特定结构蛋白以及非结构蛋白。其中，SARS病毒和MERS病毒给人类造成了尤其巨大的危害。本文总结了有关HCoV基因组分子进化的最新发现，重点关注造成新病毒基因型的突变和新性状的突变。</p>
+<h2 id="1-分子进化的生物学意义"><a href="#1-分子进化的生物学意义" class="headerlink" title="1. 分子进化的生物学意义"></a>1. 分子进化的生物学意义</h2><p>分子进化（molecular evolution）是指生物进化过程中生物大分子的演变现象。主要包括蛋白质分子的演变、核酸分子的演变和遗传密码的演变。</p>
+<p>分子进化在研究物种进化关系中具有重要意义。上个世纪60年代，Zucherkandl提出分子钟[1]概念，即物种的同源基因之间的差异程度与它们的共同祖先的存在时间(即两者的分歧时间)呈线性关系。基于这个结论，我们可以借助蛋白质、核酸等生物大分子的进化情况判断物种的进化地位，在分子进化树中相距越远，物种进化水平也就越远。</p>
+<p>同时分子进化在研究疾病发生中具有重要作用，我们可以根据序列的突变情况判断对生物进化有利的突变类型。</p>
+<p>本文研究的文献<em>Molecular Evolution of Human Coronavirus Genomes（PMID: 27743750）</em>通过分析各类型冠状病毒的系统进化树以及在进化不同阶段发生的突变类型，分析冠状病毒感染人类的原因并探讨潜在的治疗方案。</p>
+<h2 id="2-分子进化的相关工具"><a href="#2-分子进化的相关工具" class="headerlink" title="2. 分子进化的相关工具"></a>2. 分子进化的相关工具</h2><p>随着测序技术的普及和序列比对技术的日趋成熟，我们已经实现了利用大量生物分子数据构建分子进化的系统发育分析。截至目前，已有多种基于分子进化的手段构建系统发育分析的工具（表1）。</p>
+<p>表 1 常用的系统发育分析工具</p>
+<img src="/2020/01/22/2019-ncov/image001.png" class="">
+
+<p>可以根据研究水平和所用算法对已有工具进行简单分类。</p>
+<h3 id="2-1基于研究水平的分类"><a href="#2-1基于研究水平的分类" class="headerlink" title="2.1基于研究水平的分类"></a>2.1基于研究水平的分类</h3><ul>
+<li><p>  单个基因或蛋白序列的进化信息</p>
+</li>
+<li><p>  多基因或蛋白序列的进化信息</p>
+</li>
+<li><p>  全基因组序列的进化信息</p>
+</li>
+</ul>
+<h3 id="2-2基于所用算法的分类"><a href="#2-2基于所用算法的分类" class="headerlink" title="2.2基于所用算法的分类"></a>2.2基于所用算法的分类</h3><ul>
+<li>  基于字符序列的系统发育树重构算法：</li>
+</ul>
+<p>最大简约法 MP 最大似然法 ML 贝叶斯 BI</p>
+<ul>
+<li>  基于距离的系统发育树重构算法：</li>
+</ul>
+<p>邻接法 NJ 非加权分组平均法 UPGMA</p>
+<h2 id="3-进化选择压力"><a href="#3-进化选择压力" class="headerlink" title="3. 进化选择压力"></a>3. 进化选择压力</h2><p>非同义突变的发生率与同义突变的发生率的比值（ω）称为进化选择压力。其中非同义突变的发生率为非同义突变SNP数/非同义位点数，同义突变发生率为同义突变SNP数/同义位点数。可以理解，当非同义突变数量多时，突变倾向于有利于生存；而当同义突变数量多时，突变倾向于不利于生存，即突变不会被物种保留。即：</p>
+<ol>
+<li><p> 当ω&gt;1时，向进化的趋势发展，多为共同进化；</p>
+</li>
+<li><p> 当ω&lt;1时，消除有害突变，保留原基因。</p>
+</li>
+</ol>
+<h2 id="4-关于冠状病毒-Hcov-的介绍"><a href="#4-关于冠状病毒-Hcov-的介绍" class="headerlink" title="4. 关于冠状病毒(Hcov)的介绍"></a>4. 关于冠状病毒(Hcov)的介绍</h2><p>冠状病毒是一种以脊椎动物为感染对象的病毒，主要感染病毒包括2002年在中国爆发的SARS冠状病毒（俗称非典）和2012年在沙特爆发的MERS新型冠状病毒（中东呼吸综合征）。其感染体，前者主要为蝙蝠、人类和果子狸等，后者主要包括蝙蝠、人类、羊驼以及骆驼等。主要表现为呼吸系统疾病。</p>
+<h2 id="5-基于分子钟分析冠状病毒进化树"><a href="#5-基于分子钟分析冠状病毒进化树" class="headerlink" title="5. 基于分子钟分析冠状病毒进化树"></a>5. 基于分子钟分析冠状病毒进化树</h2><p>文章基于已有文献的数据[2-5]，对于不同类型的Hcov病毒利用基于ML算法的RAxML软件绘制了系统发生树。</p>
+<img src="/2020/01/22/2019-ncov/image002.png" class="">
+
+<p>图 1 不同类型的Hcov病毒的系统发生树</p>
+<p>基于系统发生树，我们可以得到冠状病毒的进化历史：SARS与MERS病毒都是近二十年进化出的新型冠状病毒，其祖代包括NL63、229E、OC43、HKU1病毒。进化关系如图：</p>
+<img src="/2020/01/22/2019-ncov/image003.jpg" class="">
+
+<p>图 2 冠状病毒的进化历史</p>
+<h2 id="6-病毒突变情况分析"><a href="#6-病毒突变情况分析" class="headerlink" title="6. 病毒突变情况分析"></a>6. 病毒突变情况分析</h2><h3 id="6-1-ORF结构蛋白突变"><a href="#6-1-ORF结构蛋白突变" class="headerlink" title="6.1 ORF结构蛋白突变"></a>6.1 ORF结构蛋白突变</h3><p>根据各种冠状病毒的基因比对，我们发现在SARSr-CoV病毒的ORF8蛋白序列在人类与蝙蝠中存在较大差异[7]。文献选择部分人类SARS冠状病毒(Human SARS-CoV)、灵猫SARS冠状病毒(Civet SARSr-CoV)以及蝙蝠SARS冠状病毒(SARSr-BatCoV)，发现其他序列区域各物种差别不大，但ORF8序列蝙蝠病毒与其他两者具有较大差异，SARSr-BatCoV与Human SARS-CoV的同一性约为33％。</p>
+<p>表 2 部分SARSr-CoV与灵猫SARSr-CoV SZ3的氨基酸序列同一性百分比</p>
+<img src="/2020/01/22/2019-ncov/image009.png" class="">
+
+<p>分析各物种各序列区域进化选择压力ω值（Ka/Ks，详细定义见3），发现该ORF8序列对应的ω值为3.5，远大于评估标准的1；与之相对的，在蝙蝠病毒中ORF8区域的ω值只有0.178/0.19。这说明人类SARS-CoV的ORF8区域突变确实导致了该病毒更加适应在人体内的生存。我们可以设想：在SARS-CoV病毒从蝙蝠转向人体的过程中，ORF8序列的突变型从原本的不利于生存转变为了有利于生存，为此我们可以通过研究ORF8区域突变情况分析SARS病毒在人类中传播的可能因素。</p>
+<p>表 3 不同宿主之间SARSr-CoVs编码区的进化选择性ω值（Ka/Ks）</p>
+<img src="/2020/01/22/2019-ncov/image010.png" class="">
+<p>同样的，在祖型的HCoV-229E病毒研究中[8]，我们同样发现蝙蝠病毒开始感染羊驼时也出现了相似的ORF蛋白序列缺失现象。</p>
+<img src="/2020/01/22/2019-ncov/image004.png" class="">
+
+<p>图 3 人（图下）与羊驼（图上）蛋白序列比对</p>
+<h3 id="6-2-MERS病毒S蛋白RBD序列突变"><a href="#6-2-MERS病毒S蛋白RBD序列突变" class="headerlink" title="6.2 MERS病毒S蛋白RBD序列突变"></a>6.2 MERS病毒S蛋白RBD序列突变</h3><p>在对中东呼吸综合征的MERS-CoV序列比对分析中，有文献发现，伴随着从中东传入韩国，MERS病毒绝大多数基因组在病毒性穿刺蛋白（S蛋白）的受体结合域（RBD）都发生了点突变（分为D510G和I529T两种），与野生型RBD相比，这种突变会导致RBD对人CD26受体的亲和力降低[9]。经分析，人体CD26受体区域与体液免疫反应息息相关，MERS病毒通过突变以减少同抗体的结合，从而抑制机体免疫。</p>
+<img src="/2020/01/22/2019-ncov/image005.png" class="">
+
+<p>图 4 MERS病毒突变情况</p>
+<p>图中蓝色三角表示同义突变，红色三角表示非同义突变</p>
+<p>图中展示了穿刺蛋白（S蛋白）突变情况的详细情况，从图中可以看出，大部分样本都在S蛋白RBD区域出现了同义突变。</p>
+<img src="/2020/01/22/2019-ncov/image006.png" class="">
+
+<p>图 5 RBD区域结合情况</p>
+<p>图中展示了野生型与突变RBD（D510G和I529T）对CD26的结合亲和力，可以看出，两种点突变都显著降低了RBD区域与CD26的结合。</p>
+<h3 id="6-3-229E病毒S基因缺失"><a href="#6-3-229E病毒S基因缺失" class="headerlink" title="6.3 229E病毒S基因缺失"></a>6.3 229E病毒S基因缺失</h3><p>在关于HCoV-229E的研究中，有文献指出，与蝙蝠病毒相比，人类病毒与羊驼病毒的S基因出现了缺失现象[10]，下图A中HCov病毒和Alpaca病毒的S基因（图中Spike区域）明显短于BtCov该基因，下图B中可以看出，HCov-229E病毒S基因除了与羊驼病毒（Alpaca 229E）相似度极高外，与蝙蝠病毒相似度都在60%左右。</p>
+<img src="/2020/01/22/2019-ncov/image007.png" class="">
+
+<p>图 6 蝙蝠与人类冠状病毒N末端突变情况</p>
+<p>这种缺失也存在于骆驼衍生的α-CoV中，同时这种突变表现为S基因的N末端结合区（NTD）出现了缺失现象[11]。</p>
+<img src="/2020/01/22/2019-ncov/image008.png" class="">
+
+<p>图 7 骆驼α-CoV 病毒突变情况</p>
+<p>同时，在一篇研究猪呼吸道冠状病毒（PRCV）与传染性胃肠炎病毒（TGEV）差异的文章[12]中，作者发现两种病毒的序列相似性为96%，而二者的主要差别正好在于S基因N末端的缺失。而冠状病毒在蝙蝠感染阶段同样主要表现为肠胃疾病，而伴随着S基因N末端的缺失进入畜类及人类，冠状病毒主要表现为呼吸道疾病。我们知道，非典和中东呼吸综合征的主要病情均表现为呼吸困难，因此研究S 基因缺失与疾病表现之间的关系具有相当重要的意义。</p>
+<h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h2><p>本文主要介绍了应用分子进化技术研究冠状病毒的几个最新进展：</p>
+<ol>
+<li><p> SARS与MERS病毒都是近二十年进化出的新型冠状病毒，其祖代包括NL63、229E、OC43、HKU1病毒，最可能由蝙蝠传入人体；</p>
+</li>
+<li><p> CoV的ORF8区域突变导致了该病毒更加适应在人体内的生存；</p>
+</li>
+<li><p> S基因RBD突变可以减少同机体抗体的结合，从而抑制机体免疫；</p>
+</li>
+<li><p> S基因N末端的缺失导致疾病由肠胃疾病转变为致死性的呼吸道疾病。</p>
+</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><p> Zuckerkandl E. On the molecular evolutionary clock. J Mol Evol.1987;26(1-2):34-46. Review. PubMed PMID: 3125336.</p>
+</li>
+<li><p> Chan, J. F., K. K. To, H. Tse, D. Y. Jin and K. Y. Yuen (2013). “Interspecies transmission and emergence of novel viruses: lessons from bats and birds.” <em>Trends Microbiol</em> <strong>21</strong>(10): 544-555.</p>
+</li>
+<li><p> Graham, R. L., E. F. Donaldson and R. S. Baric (2013). “A decade after SARS: strategies for controlling emerging coronaviruses.” <em>Nat Rev Microbiol</em> <strong>11</strong>(12): 836-848.</p>
+</li>
+<li><p> Lau, S. K., P. C. Woo, K. S. Li, A. K. Tsang, R. Y. Fan, H. K. Luk, J. P. Cai, K. H. Chan, B. J. Zheng, M. Wang and K. Y. Yuen (2015). “Discovery of a novel coronavirus, China Rattus coronavirus HKU24, from Norway rats supports the murine origin of Betacoronavirus 1 and has implications for the ancestor of Betacoronavirus lineage A.” <em>J Virol</em> <strong>89</strong>(6): 3076-3092.</p>
+</li>
+<li><p> Woo, P. C., S. K. Lau, C. S. Lam, A. K. Tsang, S. W. Hui, R. Y. Fan, P. Martelli and K. Y. Yuen (2014). “Discovery of a novel bottlenose dolphin coronavirus reveals a distinct species of marine mammal coronavirus in Gammacoronavirus.” <em>J Virol</em> <strong>88</strong>(2): 1318-1331.</p>
+</li>
+<li><p> Forni, D., R. Cagliani, M. Clerici and M. Sironi (2017). “Molecular Evolution of Human Coronavirus Genomes.” <em>Trends Microbiol</em> <strong>25</strong>(1): 35-48.</p>
+</li>
+<li><p> Lau, S. K., Y. Feng, H. Chen, H. K. Luk, W. H. Yang, K. S. Li, Y. Z. Zhang, Y. Huang, Z. Z. Song, W. N. Chow, R. Y. Fan, S. S. Ahmed, H. C. Yeung, C. S. Lam, J. P. Cai, S. S. Wong, J. F. Chan, K. Y. Yuen, H. L. Zhang and P. C. Woo (2015). “Severe Acute Respiratory Syndrome (SARS) Coronavirus ORF8 Protein Is Acquired from SARS-Related Coronavirus from Greater Horseshoe Bats through Recombination.” <em>J Virol</em> <strong>89</strong>(20): 10532-10547.</p>
+</li>
+<li><p> Crossley, B. M., R. E. Mock, S. A. Callison and S. K. Hietala (2012). “Identification and characterization of a novel alpaca respiratory coronavirus most closely related to the human coronavirus 229E.” Viruses 4(12): 3689-3700.</p>
+</li>
+<li><p> Kim, Y., S. Cheon, C. K. Min, K. M. Sohn, Y. J. Kang, Y. J. Cha, J. I. Kang, S. K. Han, N. Y. Ha, G. Kim, A. Aigerim, H. M. Shin, M. S. Choi, S. Kim, H. S. Cho, Y. S. Kim and N. H. Cho (2016). “Spread of Mutant Middle East Respiratory Syndrome Coronavirus with Reduced Affinity to Human CD26 during the South Korean Outbreak.” MBio 7(2): e00019.</p>
+</li>
+<li><p>Corman, V. M., H. J. Baldwin, A. F. Tateno, R. M. Zerbinati, A. Annan, M. Owusu, E. E. Nkrumah, G. D. Maganga, S. Oppong, Y. Adu-Sarkodie, P. Vallo, L. V. da Silva Filho, E. M. Leroy, V. Thiel, L. van der Hoek, L. L. Poon, M. Tschapka, C. Drosten and J. F. Drexler (2015). “Evidence for an Ancestral Association of Human Coronavirus 229E with Bats.” J Virol 89(23): 11858-11870.</p>
+</li>
+<li><p>Sabir, J. S., T. T. Lam, M. M. Ahmed, L. Li, Y. Shen, S. E. Abo-Aba, M. I. Qureshi, M. Abu-Zeid, Y. Zhang, M. A. Khiyami, N. S. Alharbi, N. H. Hajrah, M. J. Sabir, M. H. Mutwakil, S. A. Kabli, F. A. Alsulaimany, A. Y. Obaid, B. Zhou, D. K. Smith, E. C. Holmes, H. Zhu and Y. Guan (2016). “Co-circulation of three camel coronavirus species and recombination of MERS-CoVs in Saudi Arabia.” Science 351(6268): 81-84.</p>
+</li>
+<li><p>Rasschaert, D., M. Duarte and H. Laude (1990). “Porcine respiratory coronavirus differs from transmissible gastroenteritis virus by a few genomic deletions.” J Gen Virol 71 ( Pt 11): 2599-2607.</p>
+</li>
+</ol>
+</div></article><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/">生物信息</a><a class="post-meta__tags" href="/tags/%E5%88%86%E5%AD%90%E8%BF%9B%E5%8C%96/">分子进化</a><a class="post-meta__tags" href="/tags/%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/">冠状病毒</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/06/30/kaoyan/"><i class="fa fa-chevron-left">  </i><span>考研经验教训总结</span></a></div><div class="next-post pull-right"><a href="/2020/01/02/NGS-to-drug/"><span>基于高通量数据的药物重定位</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(/sabar.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2018 - 2022 By 双语之城</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
